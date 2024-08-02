@@ -29,6 +29,9 @@ app.use('/username',getUserRoute);
 app.use('/',getBranchRoute);
 app.use('/',updateUserRoute);
 
+app.get('/',(req,res)=>{
+    res.json({'msg':'Hello Developer'});
+})
 
 app.listen(process.env.PORT,()=>{
     console.log("Server Running on PORT "+ process.env.PORT);
