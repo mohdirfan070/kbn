@@ -107,7 +107,7 @@ export default function loginForm() {
       //  alert('Please fill all details!')
     } else {
       setResponse({ ...response, status: true });
-      let result = await axios.post("http://localhost:8080/signup", formData);
+      let result = await axios.post("https://kbnapiv1.onrender.com/signup", formData);
       // console.log(result.data.userData);
       if (result.data.user) {
         setResponse({ ...response, status: result.data.status });
@@ -132,7 +132,7 @@ export default function loginForm() {
       runToast("Please fill all details!", "error");
     } else {
       setResponse({ ...response, status: true });
-      let result = await axios.post("http://localhost:8080/login", formData);
+      let result = await axios.post("https://kbnapiv1.onrender.com/login", formData);
       // console.log(result);
       if (result.data.user.status) {
         runToast("Login Successfull!", "success");

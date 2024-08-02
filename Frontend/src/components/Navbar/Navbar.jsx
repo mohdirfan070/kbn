@@ -22,7 +22,7 @@ export default function Navbar(prop) {
   const fetchUser = async (email) => {
     // console.log(email)
     await axios
-      .post("http://localhost:8080/username", { email })
+      .post("https://kbnapiv1.onrender.com/username", { email })
       .then((result) => {
         setUser({ ...result.data.user });
         console.log(`Welcome ${result.data.user.name}`);

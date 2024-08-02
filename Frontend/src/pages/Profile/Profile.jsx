@@ -33,7 +33,7 @@ export default function Profile() {
   //Fetching User
   const fetchUser = async (email) => {
     await axios
-      .post("http://localhost:8080/username", { email })
+      .post("https://kbnapiv1.onrender.com/username", { email })
       .then((result) => {
         setUser({ ...result.data.user });
       });
@@ -69,7 +69,7 @@ export default function Profile() {
   const updateDetails = async (user) => {
     // response.status=true;
     setResponse({ ...response, status: true });
-    await axios.post("http://localhost:8080/updateuser", user).then(() => {
+    await axios.post("https://kbnapiv1.onrender.com/updateuser", user).then(() => {
       runToast("Updated Successfully!", "success");
       setEdit(true);
       setResponse({ ...response, status: false });
