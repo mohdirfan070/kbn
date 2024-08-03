@@ -73,9 +73,7 @@ export default function Profile() {
       runToast("Updated Successfully!", "success");
       setEdit(true);
       setResponse({ ...response, status: false });
-      setTimeout(()=>{
-        location.reload();
-      },1000);
+      localStorage.setItem('update',!localStorage.getItem('update'));
     });
   };
 

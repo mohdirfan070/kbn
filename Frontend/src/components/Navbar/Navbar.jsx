@@ -37,7 +37,7 @@ export default function Navbar(prop) {
       setIsLogin(false);
       console.log("Please Login!");
     }
-  }, [localStorage.getItem("isLogin")]);
+  }, [localStorage.getItem("isLogin") , localStorage.getItem('update')]);
 
   return (
     <>

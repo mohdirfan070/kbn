@@ -138,6 +138,7 @@ export default function loginForm() {
         runToast("Login Successfull!", "success");
         setResponse({ ...response, status: result.data.status });
         localStorage.setItem("isLogin",true);
+        localStorage.setItem('update',false);
         localStorage.setItem("email",result.data.user.userData.email);
         localStorage.setItem("pwd",result.data.user.userData.password);
          navigate('/');
